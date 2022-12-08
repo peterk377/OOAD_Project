@@ -62,7 +62,7 @@ public class Customer extends Person{
         return order;
     }
 
-    public Complaint createComplaint(){
+    public Complaint createComplaint(Order order){
 
         Complaint complaint = new Complaint();
         complaint.setComplaint("Driver was rude");

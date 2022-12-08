@@ -98,10 +98,10 @@ public class Order{
 
     @Override
     public String toString() {
-        return  "orderId=" + orderId + ", dateOfOrder=" + dateOfOrder +
-                ", customerName=" + customerName + ", driverName=" + driverName +
-                ", pickUpAddress='" + pickUpAddress + ", dropOffAddress='" + dropOffAddress +
-                ", orderCost=" + orderCost + ", wasPayed=" + wasPayed +
-                ", orderStatus='" + orderStatus;
+        return  "orderId = " + orderId + ", dateOfOrder = " + dateOfOrder +
+                ", customerName = " + customerName + ", driverName = " + driverName +
+                ", pickUpAddress = '" + pickUpAddress + ", dropOffAddress = '" + dropOffAddress +
+                ", orderCost = " + orderCost + ", wasPayed = " + wasPayed +
+                ", orderStatus = '" + orderStatus;
     }
 }

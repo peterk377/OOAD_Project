@@ -16,26 +16,26 @@ public final class Project {
         Car car1 = createCar(customer1);
         //System.out.println(car1.toString());//this line of code prints out the details of the car
         Order order1 = customer1.createOrder();
-        System.out.println(order1.toString());//this line of code prints out the details of the order
+        //System.out.println(order1.toString());//this line of code prints out the details of the order
         Driver driver1 = createDriver(order1);
         //System.out.println(driver1.toString());//this line of code prints out the details of the driver
         Manager manager1 = createManager();
         //System.out.println(manager1.toString());
 
         driver1.collectCustomer(order1);//this line of code changes the status of the order to in process
-        System.out.println(order1.toString());//this line of code prints out the updated order details
+        //System.out.println(order1.toString());//this line of code prints out the updated order details
         driver1.setCost(5.00);
         driver1.updatePrice(order1);//driver adds 5 euro to the total charge of the service
         //System.out.println(order1.toString());//this line of code prints out the updated order details
         driver1.dropCustomer(order1);//this line of code changes the status of the order to complete and changes wasPayed to true
-        System.out.println(order1.toString());//this line of code prints out the updated order details
+        //System.out.println(order1.toString());//this line of code prints out the updated order details
 
         //Customer creates a complaint
-        Complaint complaint1 = customer1.createComplaint();
+        Complaint complaint1 = customer1.createComplaint(order1);
         //System.out.println(complaint1.toString());
         manager1.viewComplaint(complaint1);//manager views complaint
         manager1.resolveComplaint(complaint1);//manager resolves complaint
-        //System.out.println(complaint1.toString());
+        System.out.println(complaint1.toString());
         manager1.refund(order1);//manager refunds the customer
         System.out.println(order1.toString());
     }

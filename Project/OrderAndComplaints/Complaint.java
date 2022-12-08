@@ -6,12 +6,20 @@
 
 package OrderAndComplaints;
 
-import People.Customer;
+public final class Complaint {
 
-public final class Complaint extends Customer {
-
+    private Order order;
+    private int orderId;
     private String complaint;
     private boolean resolved = false;
+
+    public int getOrderId() {
+        return this.orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = order.getOrderId();
+    }
 
     public String getComplaint() {
         return this.complaint;
@@ -31,6 +39,6 @@ public final class Complaint extends Customer {
 
     @Override
     public String toString() {
-        return "complaint='" + complaint + ", resolved=" + resolved;
+        return "OrderID = " + orderId + ", complaint = '" + complaint + ", resolved = " + resolved;
     }
 }
